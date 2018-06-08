@@ -1,0 +1,13 @@
+{
+  "name": "Example2",
+  "app_id": "",
+  "proxies": [
+   {
+     "path": "/",
+     "proxyUrl": "https://video-server.joeydash.com/"
+   }],
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
