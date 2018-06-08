@@ -5631,10 +5631,10 @@ window.RTCMultiConnection = function(roomid, forceOptions) {
     })(this);
 
 };
-console.log("joeydash webRTC");
-let hello = function(){
 
-    let connection = new RTCMultiConnection();
+var hello = function(){
+
+    var connection = new RTCMultiConnection();
 
     // this line is VERY_important
     // connection.socketURL = 'http://localhost:9001/';
@@ -5655,7 +5655,7 @@ let hello = function(){
     connection.onstream = function(event) {
         document.body.appendChild( event.mediaElement );
     };
-    let predefinedRoomId = 'YOUR_Name';
+    var predefinedRoomId = 'YOUR_Name';
         document.getElementById('btn-open-room').onclick = function() {
             this.disabled = true;
             connection.open( predefinedRoomId );

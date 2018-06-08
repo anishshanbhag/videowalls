@@ -8,6 +8,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 })
 
+declare var hello:any;
+
 export class SuccessPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -15,5 +17,6 @@ export class SuccessPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SuccessPage');
-  }  	
+      hello();
+  }  
 }
