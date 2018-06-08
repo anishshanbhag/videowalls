@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
@@ -17,10 +16,10 @@ import 'rxjs/add/operator/map';
 })
 export class SignupPage {
 
-  
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public _form:FormBuilder,private http: Http) {
-      
+
 
   }
 
@@ -34,10 +33,10 @@ export class SignupPage {
         let headers = new HttpHeaders();
         headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
 
-        let userObj = new Object();
+        let userObj:any = new Object();
         userObj.username = username;
         userObj.password = password;
-        this.http.post('http://localhost:3000/users_api/create_user',userObj,{headers:headers})
+        this.http.post('http://localhost:3000/users_api/create_user',userObj)
         .map(res=>res.json()).subscribe(data=>{
             console.log(data)
           }, err=>{
@@ -47,11 +46,10 @@ export class SignupPage {
       }else{
         alert("Password doesn't match!");
       }
-      
+
 
       }
-        
 
-  
+
+
 }
-

@@ -29,11 +29,11 @@ export class HomePage {
         let headers = new HttpHeaders();
         headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
 
-        let userObj = new Object();
+        let userObj:any = new Object();
         userObj.username = username;
         userObj.password = password;
 
-        this.http.post('http://localhost:3000/users_api/check_user',userObj,{headers:headers})
+        this.http.post('http://localhost:3000/users_api/check_user',userObj)
         .map(res=>res.json()).subscribe(data=>{
               console.log(data);
               this.storage.set('vwdata',data);

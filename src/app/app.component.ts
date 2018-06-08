@@ -53,9 +53,9 @@ export class MyApp {
     	}
     } else {
     	rootPage = HomePage;
-    } 	 
+    }
     });
-   
+
 }
-  
+
 }

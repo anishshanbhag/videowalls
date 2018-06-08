@@ -5,7 +5,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-success',
   templateUrl: 'success.html',
-  	
+
 })
 
 export class SuccessPage {
@@ -15,6 +15,5 @@ export class SuccessPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SuccessPage');
-     hello();
   }  	
 }

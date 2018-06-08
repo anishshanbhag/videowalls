@@ -46,4 +46,3 @@ import { Camera } from '@ionic-native/camera';
   ]
 })
 export class AppModule {}
-
